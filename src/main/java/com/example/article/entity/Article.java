@@ -1,5 +1,6 @@
 package com.example.article.entity;
 
+import com.example.article.dto.ArticleWriteRequestDto;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
@@ -28,6 +29,13 @@ public class Article extends TimeStamped {
         this.content = content;
         this.writer = writer;
         this.password = password;
+    }
+
+    public void edit(ArticleWriteRequestDto articleDto) {
+        this.title = articleDto.getTitle();
+        this.content = articleDto.getContent();
+        this.writer = articleDto.getWriter();
+        this.password = articleDto.getPassword();
     }
 
     public Long getId() {

@@ -1,12 +1,12 @@
 package com.example.article.dto;
 
-public class ArticleCreateRequestDto {
+public class ArticleWriteRequestDto {
     private String title;
     private String content;
     private String writer;
     private String password;
 
-    public ArticleCreateRequestDto(String title, String content, String writer, String password) {
+    public ArticleWriteRequestDto(String title, String content, String writer, String password) {
         this.title = title;
         this.content = content;
         this.writer = writer;
